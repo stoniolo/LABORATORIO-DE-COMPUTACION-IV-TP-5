@@ -12,13 +12,13 @@ import javax.swing.JMenuItem;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Main_Window extends JFrame {
+public class Main_Frame extends JFrame {
 
 	private JPanel contentPane;
 	/**
 	 * Create the frame.
 	 */
-	public Main_Window() {
+	public Main_Frame() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		
@@ -32,7 +32,7 @@ public class Main_Window extends JFrame {
 		mntmAgregar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				contentPane.removeAll();
-				Add_Window panel = new Add_Window();
+				Add_Panel panel = new Add_Panel();
 				contentPane.add(panel);
 				contentPane.repaint();
 				contentPane.revalidate();
@@ -45,7 +45,7 @@ public class Main_Window extends JFrame {
 		mntmListar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				contentPane.removeAll();
-				ListAll_Window panel = new ListAll_Window();
+				ListAll_Panel panel = new ListAll_Panel();
 				contentPane.add(panel);
 				contentPane.repaint();
 				contentPane.revalidate();

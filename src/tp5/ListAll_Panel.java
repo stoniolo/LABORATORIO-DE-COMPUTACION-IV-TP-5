@@ -4,12 +4,12 @@ import javax.swing.JPanel;
 import java.awt.List;
 import javax.swing.JLabel;
 
-public class ListAll_Window extends JPanel {
+public class ListAll_Panel extends JPanel {
 
 	/**
 	 * Create the panel.
 	 */
-	public ListAll_Window() {
+	public ListAll_Panel() {
 		setLayout(null);
 		
 		List list = new List();

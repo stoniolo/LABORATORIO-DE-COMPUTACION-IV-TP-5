@@ -8,7 +8,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Add_Window extends JPanel {
+public class Add_Panel extends JPanel {
 	private JTextField textField;
 	private JTextField textField_1;
 	private JComboBox<Genres> comboBox;
@@ -16,7 +16,7 @@ public class Add_Window extends JPanel {
 	/**
 	 * Create the panel.
 	 */
-	public Add_Window() {
+	public Add_Panel() {
 		setLayout(null);
 		
 		JLabel lblId = new JLabel("ID:");
