@@ -5,6 +5,12 @@ public class Genres {
 	private int id;
 	private String name;
 	
+	Genres(int i, String n)
+	{
+		this.id = i;
+		this.name = n;
+	}
+	
 	//sets & gets
 	public int getId() {
 		return id;
@@ -24,6 +30,6 @@ public class Genres {
 
 	@Override
 	public String toString() {
-		return "Genero: " + name;
+		return name;
 	}
 }
