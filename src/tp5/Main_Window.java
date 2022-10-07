@@ -42,6 +42,15 @@ public class Main_Window extends JFrame {
 		mnAgregar.add(mntmAgregar);
 		
 		JMenuItem mntmListar = new JMenuItem("Listar");
+		mntmListar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				contentPane.removeAll();
+				ListAll_Window panel = new ListAll_Window();
+				contentPane.add(panel);
+				contentPane.repaint();
+				contentPane.revalidate();
+			}
+		});
 		mnAgregar.add(mntmListar);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
