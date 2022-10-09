@@ -3,9 +3,7 @@ package tp5;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
-import javax.swing.DefaultListModel;
 import javax.swing.JFrame;
-import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JMenuBar;
@@ -17,9 +15,6 @@ import java.awt.event.ActionEvent;
 public class Main_Frame extends JFrame {
 
 	private JPanel contentPane;
-	private static JList list;
-	private static DefaultListModel listModel;
-	
 	/**
 	 * Create the frame.
 	 */
@@ -38,7 +33,6 @@ public class Main_Frame extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				contentPane.removeAll();
 				Add_Panel panel = new Add_Panel();
-				panel.setDefaultListModel(listModel);
 				contentPane.add(panel);
 				contentPane.repaint();
 				contentPane.revalidate();
@@ -52,7 +46,6 @@ public class Main_Frame extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				contentPane.removeAll();
 				ListAll_Panel panel = new ListAll_Panel();
-				panel.setDefaultListModel(listModel);
 				contentPane.add(panel);
 				contentPane.repaint();
 				contentPane.revalidate();
@@ -64,7 +57,5 @@ public class Main_Frame extends JFrame {
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
 	}
-	
-	
 
 }

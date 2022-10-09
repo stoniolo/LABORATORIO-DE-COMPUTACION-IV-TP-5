@@ -11,8 +11,6 @@ public class Genres {
 		this.name = n;
 	}
 	
-	Genres(){}
-	
 	//sets & gets
 	public int getId() {
 		return id;

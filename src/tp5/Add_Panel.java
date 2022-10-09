@@ -4,7 +4,6 @@ import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
-import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -13,8 +12,6 @@ public class Add_Panel extends JPanel {
 	private JTextField textField;
 	private JTextField textField_1;
 	private JComboBox<Genres> comboBox;
-	private DefaultListModel<Movies> listModel;
-	
 	
 	/**
 	 * Create the panel.
@@ -54,8 +51,6 @@ public class Add_Panel extends JPanel {
 		textField_1.setEditable(false);
 		textField_1.setColumns(10);
 		textField_1.setBounds(183, 28, 125, 20);
-		String id = Integer.toString(Movies.returnsNextId());
-		textField_1.setText(id);
 		add(textField_1);
 		
 		//Clear editable fields >>
@@ -71,18 +66,11 @@ public class Add_Panel extends JPanel {
 		
 		JButton btnAgregar = new JButton("Agregar");
 		btnAgregar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {	
-				if(!textField.getText().isEmpty())
-				{
-					Movies movie = new Movies();
-					movie.setId(Movies.returnsNextId());
-					movie.setTitle(textField.getText());
-					movie.setGenre((Genres)comboBox.getSelectedItem());
-					listModel.addElement(movie);
-					
-					textField.setText("");
-					textField_1.setText(Integer.toString(Movies.returnsNextId() + 1));
-				}
+			public void actionPerformed(ActionEvent e) {
+				
+				/////////////
+				//ADD MOVIE//
+				/////////////
 				
 			}
 		});
@@ -90,10 +78,5 @@ public class Add_Panel extends JPanel {
 		add(btnAgregar);
 		
 		
-	}
-	
-	public void setDefaultListModel(DefaultListModel<Movies> listModelRecibido)
-	{
-		this.listModel = listModelRecibido;
 	}
 }

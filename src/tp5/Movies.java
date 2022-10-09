@@ -7,19 +7,9 @@ public class Movies {
 	private String title;
 	private Genres genre;
 	
-	// constructors
-	
-	public Movies() {}
-	
-	public Movies(int id, String title, Genres genre) {
-		super();
-		this.id = id;
-		this.title = title;
-		this.genre = genre;
-	}
 	
 	//sets & gets
-
+	
 	public int getId() {
 		return id;
 	}
