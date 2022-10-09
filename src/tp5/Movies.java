@@ -2,7 +2,7 @@ package tp5;
 
 public class Movies {
 	
-	private static int cont=0;
+	private static int cont=1;
 	private int id;
 	private String title;
 	private Genres genre;
@@ -33,7 +33,18 @@ public class Movies {
 	public void setGenre(Genres genre) {
 		this.genre = genre;
 	}
-
+	
+	Movies(String t, Genres g)
+	{
+		this.id = returnsNextId();
+		this.title = t;
+		this.genre = g;
+	}
+	Movies()
+	{
+		this.id = cont;
+		cont = cont + 1;
+	}
 	
 	//methods
 	public static int returnsNextId()
@@ -43,7 +54,7 @@ public class Movies {
 	
 	@Override
 	public String toString() {
-		return "ID=" + id + ", Titulo=" + title + ", Genero: " + genre;
+		return id + " - " + title + " - " + genre;
 	}
 	
 }

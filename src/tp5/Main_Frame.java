@@ -3,6 +3,7 @@ package tp5;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
+import javax.swing.DefaultListModel;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -15,6 +16,7 @@ import java.awt.event.ActionEvent;
 public class Main_Frame extends JFrame {
 
 	private JPanel contentPane;
+	private DefaultListModel<Movies> dlModel;
 	/**
 	 * Create the frame.
 	 */
@@ -28,11 +30,13 @@ public class Main_Frame extends JFrame {
 		JMenu mnAgregar = new JMenu("Peliculas");
 		menuBar.add(mnAgregar);
 		
+		dlModel = new DefaultListModel<Movies>();
+		
 		JMenuItem mntmAgregar = new JMenuItem("Agregar");
 		mntmAgregar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				contentPane.removeAll();
-				Add_Panel panel = new Add_Panel();
+				Add_Panel panel = new Add_Panel(dlModel);
 				contentPane.add(panel);
 				contentPane.repaint();
 				contentPane.revalidate();
@@ -45,7 +49,7 @@ public class Main_Frame extends JFrame {
 		mntmListar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				contentPane.removeAll();
-				ListAll_Panel panel = new ListAll_Panel();
+				ListAll_Panel panel = new ListAll_Panel(dlModel);
 				contentPane.add(panel);
 				contentPane.repaint();
 				contentPane.revalidate();
