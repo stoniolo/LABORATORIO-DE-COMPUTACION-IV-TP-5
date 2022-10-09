@@ -1,6 +1,6 @@
 package tp5;
 
-public class Movies {
+public class Movies implements Comparable<Movies> {
 	
 	private static int cont=1;
 	private int id;
@@ -55,6 +55,19 @@ public class Movies {
 	@Override
 	public String toString() {
 		return id + " - " + title + " - " + genre;
+	}
+
+	@Override
+	public int compareTo(Movies o) {
+		if(o.getTitle().compareTo(title) == 0)
+		{
+			return 0;
+		}else if(o.getTitle().compareTo(title) == -1)
+		{
+			return -1;
+		}else {
+			return 1;
+		}
 	}
 	
 }
