@@ -59,15 +59,7 @@ public class Movies implements Comparable<Movies> {
 
 	@Override
 	public int compareTo(Movies o) {
-		if(o.getTitle().compareTo(title) == 0)
-		{
-			return 0;
-		}else if(o.getTitle().compareTo(title) == -1)
-		{
-			return -1;
-		}else {
-			return 1;
-		}
+		return this.getTitle().compareTo(o.getTitle());
 	}
 	
 }
